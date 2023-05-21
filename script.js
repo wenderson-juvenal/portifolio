@@ -2,24 +2,21 @@
 
 let previousButton = document.querySelector("#previous-button")
 let nextButton = document.querySelector("#next-button")
-let projects = document.querySelectorAll(".project")
+let project = document.querySelector(".project")
+let divProjects = document.querySelector("#projects div")
 
 nextButton.addEventListener("click", () => {
-    projects.forEach(project => {
-        let width = project.clientWidth
-        project.style.left = Number(project.style.left.replace("px", "")) - (width + 10) + "px"
-        if (Number(project.style.left.replace("px", "")) < -(width + 10 )* (projects.length - 2)) {
-            project.style.left = -(width + 10 ) * (projects.length - 2) + "px"
-        }
-    })
+    divProjects.scrollLeft += project.clientWidth + 10
 })
-
 previousButton.addEventListener("click", () => {
-    projects.forEach(project => {
-        let width = project.clientWidth
-        project.style.left = Number(project.style.left.replace("px", "")) + width + 10 + "px"
-        if (Number(project.style.left.replace("px", "")) > 0) {
-            project.style.left = "0"
+    if (Math.abs(divProjects.scrollLeft - (divProjects.scrollWidth - divProjects.clientWidth)) <= 1) {
+        let sub
+        for (let i=0; i < divProjects.clientWidth; i += project.clientWidth + 10) {
+            sub = project.clientWidth - (divProjects.clientWidth - i) 
         }
-    })
+        divProjects.scrollLeft -= sub
+    } else {
+        divProjects.scrollLeft -= project.clientWidth + 10
+    }
+    
 })
