@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 * {
     border: none;
     margin: 0;
@@ -5,14 +7,18 @@
     box-sizing: border-box;
     color: white;
     text-decoration: none;
+    font-family: 'Inconsolata', monospace;
 }
-
 body {
     background-color: #1E1D1D;
     
 }
 h1 {
-    font-size: 11vw;
+    font-size: 17vw;
+}
+h1, h2 {
+    text-align: center;
+    font-weight: 100;
 }
 hr {
     border: 1px solid #4AD6E9;
@@ -21,10 +27,9 @@ hr {
 .sections {
     padding: 0 10vw;
 }
-/* .sections:not(nav) {
-    min-height: 80vh;
-} */
-
+.sections:not(header, #home) {
+    margin-bottom: 80px;
+}
 #menu {
     z-index: 2;
     position: fixed;
@@ -48,6 +53,7 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 80px;
 }
 #about-skills > div {
     flex-basis: 50%;
@@ -56,7 +62,12 @@ hr {
     flex-direction: column;
     gap: 20px;
 }
-
+#about p {
+    text-align: justify;
+}
+#about div hr {
+    margin: 15px 0;
+}
 #skills {
     align-items: center;
 }
@@ -119,7 +130,7 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 400px;
+    width: 80vw;
     height: 450px;
     background-color: #3B4D4B;
     padding: 16px;
@@ -151,17 +162,20 @@ hr {
 #contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 #contact form {
-    width: 500px;
-    max-width: 80vw;
+    height: 80%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 #contact form label {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
+    gap: 10px;
 }
 #contact form input[type=text] {
     padding-left: 10px;

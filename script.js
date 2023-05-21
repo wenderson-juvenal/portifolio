@@ -20,3 +20,16 @@ previousButton.addEventListener("click", () => {
     }
     
 })
+
+// let scrollPosition = divProjects.scrollLeft
+// divProjects.addEventListener('scroll', () => {
+//     let currentScroll = divProjects.scrollLeft
+    
+//     if (currentScroll > scrollPosition) {
+//         divProjects.scrollLeft = project.clientWidth
+//     } else if (currentScroll < scrollPosition) {
+//         divProjects.scrollLeft -= project.clientWidth
+//     }
+    
+//     scrollPosition = currentScroll
+//   })
