@@ -24,10 +24,11 @@ hr {
     border: 1px solid #4AD6E9;
     width: 60%;
 }
+
 .sections {
     padding: 0 10vw;
 }
-.sections:not(header, #home) {
+.sections:not(header, #home, footer) {
     margin-bottom: 80px;
 }
 #menu {
@@ -53,7 +54,7 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 50px;
 }
 #about-skills > div {
     flex-basis: 50%;
@@ -65,8 +66,8 @@ hr {
 #about p {
     text-align: justify;
 }
-#about div hr {
-    margin: 15px 0;
+#about div * {
+    margin-bottom: 15px;
 }
 #skills {
     align-items: center;
@@ -158,43 +159,17 @@ hr {
     height: 20px;
     border-radius: 8px;
 }
-
-#contact {
+footer {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    gap: 7px;
+    background-color: #000000;
+    height: 20vh;
 }
-#contact form {
-    height: 80%;
-    width: 80vw;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+footer img {
+    height:35px;
 }
-#contact form label {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-    gap: 10px;
-}
-#contact form input[type=text] {
-    padding-left: 10px;
-    background-color: transparent;
-    color: #ffffff;
-    border-bottom: 1px solid white;
-    height: 50px;
-}
-#contact form input[type=text]:focus {
-    outline: none;
-}
-#contact form input[type=submit] {
-    background-color: blue;
-    border-radius: 15px;
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
-}
-
 @media (min-width:768px) {
     #previous-button, #next-button {
         display: block;
