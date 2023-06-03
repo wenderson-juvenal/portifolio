@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Palette+Mosaic&display=swap');
 
 * {
     border: none;
@@ -8,18 +9,23 @@
     color: white;
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
+    font-weight: 100;
 }
 body {
     background-color: #1E1D1D;
     
 }
-h1 {
-    font-size: 17vw;
-}
 h1, h2 {
     text-align: center;
-    font-weight: 100;
+    font-family: 'Palette Mosaic', cursive;
 }
+h1 {
+    font-size: 10vw;
+}
+h2 {
+    font-size: 2rem;
+}
+
 hr {
     border: 1px solid #4AD6E9;
     width: 60%;
@@ -41,7 +47,9 @@ hr {
     padding-bottom: 20px;
     background-color: #1E1D1D;
 }
-
+#menu div a {
+    margin-left: 20px;
+}
 #home {
     display: flex;
     flex-direction: column;
@@ -50,9 +58,11 @@ hr {
     gap: 20px;
     height: 100vh;
 }
+#home p {
+    font-size: 20px;
+}
 #about-skills {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
@@ -65,9 +75,7 @@ hr {
     flex-direction: column;
     gap: 20px;
 }
-#about p {
-    text-align: justify;
-}
+
 #about div * {
     margin-bottom: 15px;
 }
@@ -89,7 +97,6 @@ hr {
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
 .minibubble-top {
     background-color: #20A999;
