@@ -76,8 +76,8 @@ hr {
     gap: 20px;
 }
 
-#about div * {
-    margin-bottom: 15px;
+#about blockquote * {
+    margin-bottom: 10px;
 }
 #skills > div > div {
     display: flex;
@@ -91,28 +91,30 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #20A999;
-    color: #000000;
-    box-shadow: 0 0 20px rgba(32, 169, 153, 0.5);
-    border-radius: 50%;
-    height: 100px;
+    background-color: #098d7e;
+    box-shadow: 0 0 10px #244d48;
+    border-radius: 47%;
+    height: 97px;
     width: 100px;
+    cursor: pointer;
 }
-.minibubble-top {
-    background-color: #20A999;
-    box-shadow: 0 0 20px rgba(32, 169, 153, 0.5);
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+.skills-show {
+    z-index: 2;
+    padding: 80px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #098d7e;
+    box-shadow: 0 0 10px #244d48;
+    border-radius: 10%;
 }
-.minibubble-bottom {
-    background-color: #20A999;
-    box-shadow: 0 0 20px rgba(32, 169, 153, 0.5);
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    position: relative;
-    top: 60px;
+.skills-show h3, .skills-show h4 {
+    font-size: 1.5rem;
 }
 #projects {
     position: relative;
@@ -177,6 +179,16 @@ footer {
 }
 footer img {
     height:35px;
+}
+#opacity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+    width: 100vw;
+    height: 100vh;
+    display: none;
 }
 @media (min-width:400px){
     .project{

@@ -20,3 +20,24 @@ previousButton.addEventListener("click", () => {
     }
     
 })
+
+// eventos selecionar skill
+let skills = document.querySelectorAll(".bubble ")
+let opacity = document.querySelector("#opacity")
+
+skills.forEach(skill => {
+    skill.addEventListener("click", () => {
+        let div = skill.nextElementSibling;
+        div.style.display = "flex";
+        opacity.style.display = "block";
+        
+        [div, opacity].forEach(i => {
+          i.addEventListener("click", function() {
+            div.style.display = "none"
+            opacity.style.display = "none"
+          }.bind(div))
+        })
+        
+    })
+})
+
