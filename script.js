@@ -1,3 +1,8 @@
+let loader = document.querySelector(".loader")
+setTimeout(() => {
+    loader.style.display = "none"
+}, 500)
+
 // eventos no nav dos projetos
 
 let previousButton = document.querySelector("#previous-button")
@@ -22,22 +27,24 @@ previousButton.addEventListener("click", () => {
 })
 
 // eventos selecionar skill
-let skills = document.querySelectorAll(".bubble ")
-let opacity = document.querySelector("#opacity")
+let skills = document.querySelectorAll(".bubble");
+let opacity = document.querySelector("#opacity");
 
 skills.forEach(skill => {
-    skill.addEventListener("click", () => {
-        let div = skill.nextElementSibling;
-        div.style.display = "flex";
-        opacity.style.display = "block";
-        
-        [div, opacity].forEach(i => {
-          i.addEventListener("click", function() {
-            div.style.display = "none"
-            opacity.style.display = "none"
-          }.bind(div))
-        })
-        
+  skill.addEventListener("click", () => {
+    let div = skill.nextElementSibling;
+    div.classList.add("show")
+    opacity.style.display = "block";
+    div.addEventListener("click", () => {
+        div.classList.remove("show");
+        opacity.style.display = "none";
     })
-})
+  });
+  
+  opacity.addEventListener("click", () => {
+    let div = skill.nextElementSibling;
+    div.classList.remove("show");
+    opacity.style.display = "none";
+  });
+});
 
