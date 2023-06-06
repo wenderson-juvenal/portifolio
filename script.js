@@ -48,3 +48,29 @@ skills.forEach(skill => {
   });
 });
 
+// botao mostrar mais em tecnologias de cada projeto
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     let listTechs = document.querySelectorAll(".techs")
+//     listTechs.forEach(list => {
+//       if (list.children.length > 3) {
+//         for (let i = 3; i < list.children.length; i++) {
+//             list.children[i].style.display = "none";
+//         }
+//         list.children[2].textContent = "ver mais"
+//         list.children[2].addEventListener("click", () => {
+//             console.log("Oi")
+//             for (let i = 3; i < list.children.length; i++) {
+//                 if (list.children[i].style.display === "none"){
+//                     console.log("Ok")
+//                     list.children[i].style.display = "list-item";
+//                 } else {
+//                     console.log("aa")
+//                     list.children[i].style.display = "none";
+//                 }
+//             }
+//         })
+//       }
+//     })
+//   })
+  

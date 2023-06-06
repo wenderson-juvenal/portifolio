@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Palette+Mosaic&display=swap');
 
 * {
@@ -82,6 +81,7 @@ hr {
 #skills > div > div {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 13px;
     margin: 9px;
 }
@@ -101,7 +101,7 @@ hr {
 .skills-show {
     z-index: 2;
     opacity: 0;
-    padding: 80px;
+    padding: 50px;
     transform: translate(-50%, -50%) scale(0.5);
     display: flex;
     flex-direction: column;
@@ -121,8 +121,13 @@ hr {
     transform: translate(-50%, -50%) scale(1);
 }
   
-.skills-show h3, .skills-show h4 {
+.skills-show h3 {
+    font-family: 'Palette Mosaic', cursive;
     font-size: 1.5rem;
+}
+.skills-show li {
+    margin-bottom: 5px;
+    margin-left: 20px; 
 }
 #projects {
     position: relative;
@@ -165,8 +170,7 @@ hr {
     text-align: center;
     background-color: #098d7e;
     width: 70px;
-    height: 20px;
-    padding: 2px 0;
+    padding: 3px 0;
     border-radius: 8px;
     transition: 0.1s;
 }
@@ -175,15 +179,16 @@ hr {
 }
 .techs {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     list-style: none;
 }
 .techs li {
     text-align: center;
+    font-size: small;
     background-color: #1E1D1D;
-    width: 70px;
-    height: 20px;
-    padding: 2px 0;
+    width: calc(100%/3 - 5px);
+    padding: 4px 0;
     border-radius: 8px;
 }
 footer {
