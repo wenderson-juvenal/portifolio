@@ -27,50 +27,60 @@ previousButton.addEventListener("click", () => {
 })
 
 // eventos selecionar skill
-let skills = document.querySelectorAll(".bubble");
-let opacity = document.querySelector("#opacity");
+let skills = document.querySelectorAll(".bubble")
+let opacity = document.querySelector("#opacity")
 
+function skillsHide(div, opacity) {
+    div.classList.remove("show")
+    setTimeout(() => {
+        div.classList.add("hide")
+    }, 300)
+    opacity.style.display = "none"
+}
 skills.forEach(skill => {
-  skill.addEventListener("click", () => {
-    let div = skill.nextElementSibling;
-    div.classList.add("show")
-    opacity.style.display = "block";
-    div.addEventListener("click", () => {
-        div.classList.remove("show");
-        opacity.style.display = "none";
+    skill.addEventListener("click", () => {
+        let div = skill.nextElementSibling;
+        opacity.style.display = "block"
+        div.classList.remove("hide")
+        div.classList.add("show")
+        div.addEventListener("click", () => {
+            skillsHide(div, opacity)
+        })
     })
-  });
-  
-  opacity.addEventListener("click", () => {
-    let div = skill.nextElementSibling;
-    div.classList.remove("show");
-    opacity.style.display = "none";
-  });
-});
+    
+    opacity.addEventListener("click", () => {
+        let div = skill.nextElementSibling
+        skillsHide(div, opacity)
+    })
+})
 
 // botao mostrar mais em tecnologias de cada projeto
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     let listTechs = document.querySelectorAll(".techs")
-//     listTechs.forEach(list => {
-//       if (list.children.length > 3) {
-//         for (let i = 3; i < list.children.length; i++) {
-//             list.children[i].style.display = "none";
-//         }
-//         list.children[2].textContent = "ver mais"
-//         list.children[2].addEventListener("click", () => {
-//             console.log("Oi")
-//             for (let i = 3; i < list.children.length; i++) {
-//                 if (list.children[i].style.display === "none"){
-//                     console.log("Ok")
-//                     list.children[i].style.display = "list-item";
-//                 } else {
-//                     console.log("aa")
-//                     list.children[i].style.display = "none";
-//                 }
-//             }
-//         })
-//       }
-//     })
-//   })
+document.addEventListener("DOMContentLoaded", function() {
+    let listTechs = document.querySelectorAll(".techs")
+    listTechs.forEach(list => {
+        if (list.children.length > 3) {
+            for (let i = 2; i < list.children.length; i++) {
+                list.children[i].style.display = "none";
+            }
+
+            let verMais = document.createElement("li")
+            verMais.textContent = "ver mais"
+            verMais.classList.add("verMais")
+            verMais.addEventListener("click", () => {
+                for (let i = 2; i < list.children.length-1; i++) {
+                    if (list.children[i].style.display === "none"){
+                        verMais.textContent = "ver menos"
+                        list.children[i].style.display = "list-item";
+                    } else {
+                        verMais.textContent = "ver mais"
+                        list.children[i].style.display = "none";
+                    }
+                }
+            })
+
+            list.appendChild(verMais)
+        }
+    })
+})
   
