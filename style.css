@@ -85,6 +85,12 @@ hr {
     gap: 13px;
     margin: 9px;
 }
+#skills span {
+    position: relative;
+    color: #ffffff;
+    opacity: .5;
+    margin: -13px;
+}
 
 .bubble {
     list-style: none;
@@ -135,6 +141,9 @@ hr {
 #projects {
     position: relative;
 }
+#projects h2 {
+    margin-bottom: 10px;
+}
 #projects > div {
     overflow: auto;
     display: flex;
@@ -147,6 +156,23 @@ hr {
 }
 #previous-button, #next-button{
     display: none;
+}
+#projects span {
+    position: relative;
+    color: #ffffff;
+    opacity: .5;
+    animation: mover 2s ease-in-out infinite;
+}
+@keyframes mover {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
 }
 .project {
     position: relative;
@@ -259,6 +285,9 @@ footer img {
     }
 }
 @media (min-width:768px) {
+    span {
+        display: none;
+    }
     #previous-button, #next-button {
         display: block;
         position: absolute;
