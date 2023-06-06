@@ -285,7 +285,7 @@ footer img {
     }
 }
 @media (min-width:768px) {
-    span {
+    #projects span {
         display: none;
     }
     #previous-button, #next-button {
