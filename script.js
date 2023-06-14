@@ -26,34 +26,6 @@ previousButton.addEventListener("click", () => {
     
 })
 
-// eventos selecionar skill
-let skills = document.querySelectorAll(".bubble")
-let opacity = document.querySelector("#opacity")
-
-function skillsHide(div, opacity) {
-    div.classList.remove("show")
-    setTimeout(() => {
-        div.classList.add("hide")
-    }, 300)
-    opacity.style.display = "none"
-}
-skills.forEach(skill => {
-    skill.addEventListener("click", () => {
-        let div = skill.nextElementSibling;
-        opacity.style.display = "block"
-        div.classList.remove("hide")
-        div.classList.add("show")
-        div.addEventListener("click", () => {
-            skillsHide(div, opacity)
-        })
-    })
-    
-    opacity.addEventListener("click", () => {
-        let div = skill.nextElementSibling
-        skillsHide(div, opacity)
-    })
-})
-
 // botao mostrar mais em tecnologias de cada projeto
 
 document.addEventListener("DOMContentLoaded", function() {

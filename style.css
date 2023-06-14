@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Palette+Mosaic&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Palette+Mosaic&family=Poppins:wght@600&display=swap');
 * {
     border: none;
     margin: 0;
@@ -27,7 +26,7 @@ h2 {
 
 hr {
     border: 1px solid #4AD6E9;
-    width: 60%;
+    width: 30%;
 }
 
 .sections {
@@ -60,84 +59,111 @@ hr {
 #home p {
     font-size: 20px;
 }
-#about-skills {
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#about > div {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 50px;
 }
-#about-skills > div {
-    flex-grow: 1;
+
+#about > div > div {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+    flex: 1;
 }
 
+#about-img {
+    justify-content: end;
+}
+#about-img img {
+    width: 300px;
+}
+
+#about-read {
+    gap: 20px;
+    flex-direction: column;
+    height: fit-content;
+}
+#about > div > div > p {
+    width: 300px;
+    line-height: 1.2em;
+    text-align: justify;
+    text-indent: 30px;
+}
 #about blockquote * {
     margin-bottom: 10px;
 }
-#skills > div > div {
+#skills {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     gap: 13px;
-    margin: 9px;
 }
-#skills span {
-    position: relative;
-    color: #ffffff;
-    opacity: .5;
-    margin: -13px;
+#skills > div {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
-
-.bubble {
+.skill {
+    font-size: 20px;
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #098d7e;
-    box-shadow: 0 0 10px #244d48;
-    border-radius: 47%;
-    width: 100px;
-    aspect-ratio: 1/1;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 40px 30px;
+    width: 260px;
+    height: 216px;
     cursor: pointer;
 }
-.skills-show {
-    z-index: 2;
-    opacity: 0;
-    padding: 50px;
-    transform: translate(-50%, -50%) scale(0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    background-color: #098d7e;
-    box-shadow: 0 0 10px #244d48;
-    border-radius: 30px;
-    transition: opacity 0.3s, transform 0.3s;
+.skill h3, .skill h3 * {
+    font-family: "Poppins", Sans-serif;
 }
-  
-.skills-show.show {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+.skill span {
+    position: relative;
 }
-.skills-show.hide {
-    visibility: hidden;
+.skill span::after {
+    content: "";
+    position: absolute;
+    bottom: 13.5%;
+    z-index: -1;
+    height: 0.3em;
+    width: 104%;
+    left: -1%;
+    background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);}
+.skill p {
+    height: 10%;
+    padding-left: 35px;
+    line-height: 1.4em;
+    line-height: 1.2em;
+}
+.skill p::before {
+    content: "<w>";
+    margin-bottom: 5px;
+}
+.skill p::after {
+    content: "</w>";
+    margin-top: 5px;
+
+}
+.skill p::before, .skill p::after  {
+    display: block;
+    margin-left: -35px;
+    opacity: 0.3;
+    color: white;
+    display: block;
+    margin-left: -35px;
+    font-weight: normal;
+    font-size: 14px;
 }
 
-.skills-show h3 {
-    font-family: 'Palette Mosaic', cursive;
-    font-size: 1.5rem;
-}
-.skills-show li {
-    margin-bottom: 5px;
-    margin-left: 20px; 
-}
+
 #projects {
     position: relative;
 }
