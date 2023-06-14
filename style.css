@@ -66,8 +66,7 @@ hr {
 }
 #about > div {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
@@ -75,20 +74,16 @@ hr {
 
 #about > div > div {
     display: flex;
-    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
-#about-img {
-    justify-content: end;
-}
 #about-img img {
     width: 300px;
 }
-
 #about-read {
     gap: 20px;
     flex-direction: column;
-    height: fit-content;
 }
 #about > div > div > p {
     width: 300px;
@@ -109,7 +104,8 @@ hr {
     width: fit-content;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .skill {
     font-size: 20px;
