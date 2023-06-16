@@ -7,7 +7,6 @@
     color: white;
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
-    font-weight: 100;
 }
 body {
     background-color: #1E1D1D;
@@ -85,14 +84,16 @@ hr {
     gap: 20px;
     flex-direction: column;
 }
-#about > div > div > p {
+#about p {
     width: 300px;
-    line-height: 1.2em;
-    text-align: justify;
-    text-indent: 30px;
+    line-height: 1.3em;
+    text-indent: 25px;
+    margin-bottom: 5px;
 }
-#about blockquote * {
-    margin-bottom: 10px;
+#about blockquote  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 #skills {
     display: flex;
@@ -101,7 +102,6 @@ hr {
     gap: 13px;
 }
 #skills > div {
-    width: fit-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -112,11 +112,11 @@ hr {
     list-style: none;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     border: 1px solid white;
     padding: 40px 30px;
-    width: 260px;
-    height: 216px;
-    cursor: pointer;
+    width: 350px;
+    height: 330px;
 }
 .skill h3, .skill h3 * {
     font-family: "Poppins", Sans-serif;
@@ -126,39 +126,36 @@ hr {
 }
 .skill span::after {
     content: "";
-    position: absolute;
-    bottom: 13.5%;
     z-index: -1;
+    position: absolute;
+    bottom: 13%;
     height: 0.3em;
     width: 104%;
     left: -1%;
-    background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);}
+    background-color: #2C49D8;
+}
 .skill p {
-    height: 10%;
-    padding-left: 35px;
-    line-height: 1.4em;
+    padding-left: 25px;
     line-height: 1.2em;
-}
-.skill p::before {
-    content: "<w>";
-    margin-bottom: 5px;
-}
-.skill p::after {
-    content: "</w>";
-    margin-top: 5px;
-
 }
 .skill p::before, .skill p::after  {
     display: block;
-    margin-left: -35px;
     opacity: 0.3;
     color: white;
     display: block;
-    margin-left: -35px;
+    margin-left: -25px;
     font-weight: normal;
     font-size: 14px;
 }
 
+.skill p::before {
+    content: "<wenderson>";
+    margin-bottom: 5px;
+}
+.skill p::after {
+    content: "</wenderson>";
+    margin-top: 5px;
+}
 
 #projects {
     position: relative;
