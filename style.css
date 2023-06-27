@@ -8,10 +8,41 @@
     text-decoration: none;
     font-family: 'Inconsolata', monospace;
 }
+
 body {
     background-color: #1E1D1D;
-    
 }
+
+.loader {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E1D1D;
+}
+.loader div {
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+  
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 h1, h2 {
     text-align: center;
     font-family: 'Palette Mosaic', cursive;
@@ -175,23 +206,6 @@ hr {
 #previous-button, #next-button{
     display: none;
 }
-#projects span {
-    position: relative;
-    color: #ffffff;
-    opacity: .5;
-    animation: mover 2s ease-in-out infinite;
-}
-@keyframes mover {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: 10px;
-    }
-    100% {
-        left: 0;
-    }
-}
 .project {
     position: relative;
     left: 0;
@@ -212,17 +226,23 @@ hr {
 .project-title {
     font-size: 28px;
 }
+.project div {
+    display: flex;
+    gap: 5px;
+}
 .project-link {
     display: inline-block;
     text-align: center;
-    background-color: #098d7e;
-    width: 70px;
+    color: black;
+    background-color: #90b9b9;
+    width: calc(100%/3 - 5px);
     padding: 3px 0;
+    border: 1px solid black;
     border-radius: 8px;
     transition: 0.1s;
 }
 .project-link:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
 }
 .techs {
     display: flex;
@@ -266,35 +286,6 @@ footer img {
     width: 100vw;
     height: 100vh;
     display: none;
-}
-.loader {
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #1E1D1D;
-}
-.loader div {
-    border-width: 2px 2px 0 0;
-    border-style: solid;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    animation: spin 1s infinite linear;
-}
-  
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 @media (min-width:400px){
