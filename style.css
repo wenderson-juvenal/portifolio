@@ -71,24 +71,23 @@ hr {
     gap: 50px;
 }
 
-#about > div > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #about-img img {
     width: 300px;
 }
+
 #about-read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-direction: column;
 }
-#about p {
+#about-read p {
     width: 300px;
     line-height: 1.3em;
-    text-indent: 25px;
-    margin-bottom: 5px;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 #about blockquote  {
     display: flex;
